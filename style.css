@@ -49,7 +49,11 @@ h3{
     display: inline-block;
     
 }
-
+.daytime div:hover{
+    background-color: rgb(176, 193, 248);
+    color: white;
+    transform: translateY(2px);
+}
 .daytime .active{
     background-color: rgb(122, 151, 245);
     color: white;
