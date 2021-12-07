@@ -26,6 +26,9 @@ h2{
 h3{
     font-size: 1.4em;;
 }
+p{
+    margin-bottom: 0;
+}
 .daytime{
    float: right;
   margin-right: 5%;
@@ -60,11 +63,13 @@ h3{
 }
 .navbar{
     width: 50px;
-   padding:0;
+   
    border-radius: 0 10px 10px 0;
    background-color: black;
-   z-index: 1;
-    position:absolute;
+
+    position:fixed;
+    top:30%;
+    
     display:flex;
       
 }
@@ -85,12 +90,12 @@ h3{
 }
 
 .first{
-    z-index: 0;
-    width: 70%;
-    height:100vh;
     
+    width: 70%;
+    
+    float: left;
     background-color:rgb(163 223 244 / 31%);
-   float:left;
+   
     
 }
 .second .city,.search,.moreinfo{
@@ -100,19 +105,21 @@ h3{
 .weekdays{
     display: flex;
     flex-wrap: wrap;
-    height:20%;
-    margin:2%;
-    justify-content:space-between;
+    flex-direction: row;
+   
+    justify-content:space-evenly;
     
    
 }
 .weekdays div{
      border-radius: 10%;
-     width:12%;
+     width:100px;
+     height:120px;
+     margin:10px;
      cursor: pointer;
      background-color:white;
      text-align: center;
-     padding:1%
+     padding:5px;
      
 }
 .weekdays div:hover{
@@ -127,15 +134,17 @@ img{
     margin-bottom: 5px;
     
 }
-.more{
-    width:90%;
-    height:40%;
-  margin:5%;
-  justify-content:centre;
+.first .more{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  
 }
-.more .aqi,.suninfo{
+.aqi,.suninfo{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
-    display: inline-block;
+    padding: 1%;
     border-radius: 10px;
 }
 .aqi div{
@@ -144,11 +153,11 @@ img{
 
 }
 .aqi{
-    width:45%;
-    height:100%;
-    margin-right:5%;
+    width:350px;
+    height:300px;
+    
     background-color: white;
-    float:left;
+    margin: 4% 2%;
     padding:5px;
     background-color: rgb(232, 248, 200);
     
@@ -184,11 +193,7 @@ header{
    
 }
 .aqi div button{
-    
-   
-  
    text-align: center;
-   
    font-weight: bold;
    background-color: rgb(155, 192, 226);
    color: rgb(46, 111, 209);
@@ -240,19 +245,20 @@ header{
      background-color: rgb(45, 207, 45);
  }
 .suninfo{
-    width:45%;
-    height:100%;
-   
+    width:350px;
+    height:300px;
+    margin: 4% 2%;
+    padding:3px;
     background-color: white;
-    
+   
 }
 #suninfo_head header{
     width:80%;
     display: inline-block;
 }
 #suninfo_head p{
-    width:20%;
-    text-align: right;
+    
+    right: inherit;
     font-size:1.3em;
     color:rgb(235, 152, 45);  
     display: inline-block;
@@ -295,16 +301,22 @@ header{
    
     
 }
-
-
-.search {
-   width:60%;
+.top{
+    
+    width: 75%;
     height: 40px;
-    background-color: rgb(163 223 244 / 31%);
-    border-radius: 30px;
-    margin-left: 10%;
+    margin: auto;
     margin-top: 5%;
-    padding: 5px 8px;
+    padding:2px;
+   
+}
+.search {
+   width:200px;
+    height: 100%;
+    background-color: rgb(163 223 244 / 31%);
+    border-radius: 20px;
+    
+    padding: 10px;
     justify-content: center;
     display: inline-block;
     
@@ -312,8 +324,8 @@ header{
 
 .search_input {
     display: inline-block;
-    width:80%;
-    height:30px;
+    width:85%;
+    height:20px;
     justify-content: center;
     border: 0;
     outline: 0;
@@ -321,15 +333,16 @@ header{
     align-items: center;
     caret-color: black;
     
-    line-height: 0.8rem;
+    
     transition: width 0.4s linear;
     
 }
 
 .search_icon{
-    width: 15%;
-    display:inline-block;
-    text-align: end;
+    
+    display: inline-block;
+    
+    right:inherit;
 }
 .search_icon:hover{
     transform: translateY(3px);
@@ -337,10 +350,11 @@ header{
 
 .account{
  display: inline-block;
- margin-left: 5%;
- width: 20%;
- height:40px;
- justify-content: center;
+ right: inherit;
+ 
+ height:100%;
+ right: inherit;
+ 
 }
 .account svg{
     margin-right:5px;
@@ -369,8 +383,8 @@ header{
  margin: auto;
  margin-top: 15%;
      padding:5%;
-     width:75%;
-     height:50%;
+     width:300px;
+     height:350px;
      color:white;
      border-radius: 5%;
      background-color: rgb(66 127 218 / 52%);
@@ -382,11 +396,11 @@ header{
      text-align: center;
  }
  .moreinfo{
-     width:75%;
+     width:300px;
      
      box-shadow:-10px -10px 0 0 rgb(228, 181, 247);
      border-radius: 15px;
-     height:15%;
+     height:100px;
      margin:auto;
      margin-top: 10%;
      background-color: rgb(210, 121, 245);
