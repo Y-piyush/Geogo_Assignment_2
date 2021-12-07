@@ -52,7 +52,7 @@ h3{
 .daytime div:hover{
     background-color: rgb(176, 193, 248);
     color: white;
-    transform: translateY(2px);
+    transform: translateY(1px);
 }
 .daytime .active{
     background-color: rgb(122, 151, 245);
