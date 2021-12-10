@@ -337,9 +337,9 @@ header{
     height: 100%;
     background-color: rgb(163 223 244 / 31%);
     border-radius: 20px;
-    
+    vertical-align: middle;
     padding: 8px;
-   
+   text-align: center;
     display: inline-block;
     
 }
@@ -357,12 +357,13 @@ header{
     display: inline-block;
     width:85%;
     height:20px;
+    
     border: 0;
     outline: 0;
     background: none;
     align-items: center;
     caret-color: black;
-    vertical-align: middle;
+   
     
     transition: width 0.4s linear;
     
@@ -371,7 +372,7 @@ header{
 .search_icon{
     
     display: inline-block;
-    
+   vertical-align: middle;
     right:inherit;
 }
 .search_icon:hover{
